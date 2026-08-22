@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixMyCity</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">FixMyCity</div>
+
+        <div class="nav-links">
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('report')">Report Issue</button>
+            <button onclick="showPage('reports')">My Reports</button>
+            <button onclick="showPage('admin')">Admin</button>
+        </div>
+    </nav>
+
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+
+        <div class="hero">
+            <h1>See a Problem?</h1>
+            <h2>Report It. Track It. Fix It.</h2>
+
+            <p>
+                FixMyCity helps citizens report civic problems and track
+                their resolution.
+            </p>
+
+            <button class="primary-btn" onclick="showPage('report')">
+                Report an Issue
+            </button>
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalIssues">0</h3>
+                <p>Total Issues</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="reportedIssues">0</h3>
+                <p>Reported</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="progressIssues">0</h3>
+                <p>In Progress</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="resolvedIssues">0</h3>
+                <p>Resolved</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPORT ISSUE PAGE -->
+    <section id="report" class="page">
+
+        <div class="form-container">
+
+            <h2>Report a Civic Issue</h2>
+
+            <form id="issueForm">
+
+                <label>Issue Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Example: Broken Streetlight"
+                    required
+                >
+
+                <label>Category</label>
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Road">Road</option>
+                    <option value="Garbage">Garbage</option>
+                    <option value="Streetlight">Streetlight</option>
+                    <option value="Water">Water Problem</option>
+                    <option value="Other">Other</option>
+                </select>
+
+
+                <label>Description</label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe the problem..."
+                    required
+                ></textarea>
+
+
+                <label>Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Example: MG Road, Indore"
+                    required
+                >
+
+
+                <label>Upload Image</label>
+
+                <input
+                    type="file"
+                    id="image"
+                    accept="image/*"
+                >
+
+
+                <button type="submit" class="primary-btn">
+                    Submit Issue
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- MY REPORTS PAGE -->
+    <section id="reports" class="page">
+
+        <div class="container">
+
+            <h2>My Reported Issues</h2>
+
+            <div id="reportsList" class="issues-grid">
+                <!-- JavaScript will add issues here -->
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMIN PAGE -->
+    <section id="admin" class="page">
+
+        <div class="container">
+
+            <h2>Authority Dashboard</h2>
+
+            <p>Manage all reported civic issues.</p>
+
+            <div id="adminIssues" class="issues-grid">
+
+                <!-- JavaScript will add admin issues here -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
