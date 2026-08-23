@@ -181,11 +181,7 @@ nav {
 
     padding: 150px 8% 100px;
 
-    background:
-        radial-gradient(
-            circle at 12% 15%,
-            rgba(124, 58, 237, 0.42),
-            transparent 30%
+    backgroung:url("Hero_section-bg.jpg");
         ),
 
         radial-gradient(
