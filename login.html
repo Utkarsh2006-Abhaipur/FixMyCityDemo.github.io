@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare | Login</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-orb orb-three"></div>
+
+    <header class="nav-wrapper">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="CityCare Logo">
+                <span class="logo-text">CityCare</span>
+            </a>
+
+            <div class="navlinks" id="navlinks">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="report.html" class="nav-link">Report Issue</a></li>
+                    <li><a href="track.html" class="nav-link">Track Issue</a></li>
+                    <!-- <li><a href="login.html" class="login-btn active-login">Login</a></li> -->
+                </ul>
+            </div>
+
+            <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="login-page">
+
+    <section class="login-container">
+
+        <div class="login-intro">
+
+            <div class="section-tag">
+                <span class="tag-dot"></span>
+                CityCare Portal
+            </div>
+
+            <h1>
+                Welcome to <span>CityCare.</span>
+            </h1>
+
+            <p>
+                Sign in to report civic issues, track your existing reports,
+                and stay connected with improvements happening in your city.
+            </p>
+
+            <div class="portal-features">
+
+                <div class="portal-feature">
+                    <div class="portal-feature-icon">01</div>
+                    <div>
+                        <strong>Report Issues</strong>
+                        <span>Submit civic problems directly.</span>
+                    </div>
+                </div>
+
+                <div class="portal-feature">
+                    <div class="portal-feature-icon">02</div>
+                    <div>
+                        <strong>Track Progress</strong>
+                        <span>Follow your report from submission to resolution.</span>
+                    </div>
+                </div>
+
+                <div class="portal-feature">
+                    <div class="portal-feature-icon">03</div>
+                    <div>
+                        <strong>Improve Your City</strong>
+                        <span>Help authorities identify important issues.</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="auth-card">
+
+            <div class="auth-card-header">
+
+                <h2 id="authTitle">Welcome Back</h2>
+
+                <p id="authSubtitle">
+                    Choose your portal and sign in to continue.
+                </p>
+
+            </div>
+
+
+            <!-- ROLE SELECTOR -->
+
+            <div class="role-selector">
+
+                <button
+                    type="button"
+                    class="role-btn active"
+                    data-role="citizen"
+                >
+                    Citizen
+                </button>
+
+                <button
+                    type="button"
+                    class="role-btn"
+                    data-role="admin"
+                >
+                    Admin
+                </button>
+
+            </div>
+
+
+            <!-- AUTH FORM -->
+
+            <form id="authForm">
+
+                <div class="auth-field">
+
+                    <label for="authEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="authEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="authPassword">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="authPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="togglePassword"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit-btn"
+                    id="authSubmitBtn"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <!-- CITIZEN SIGNUP -->
+
+            <div
+                class="auth-switch"
+                id="citizenAuthSwitch"
+            >
+
+                <span id="authSwitchText">
+                    Don't have an account?
+                </span>
+
+                <button
+                    type="button"
+                    id="authSwitchBtn"
+                >
+                    Create Account
+                </button>
+
+            </div>
+
+
+            <p class="admin-login-note" id="adminLoginNote">
+                Admin access is restricted to authorized CityCare officials.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script type="module" src="script.js"></script>
+<script type="module" src="login.js"></script>
+</body>
+</html>
