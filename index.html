@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <!-- NAVIGATION INSIDE HERO -->
+        <header class="nav-wrapper">
+            <nav class="navbar">
+
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="CityCare Logo">
+                    <span class="logo-text">CityCare</span>
+                </a>
+
+                <div class="navlinks" id="navlinks">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="report.html" class="nav-link">
+                                Report Issue
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="track.html" class="nav-link">
+                                Track Issue
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html" class="login-btn">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </nav>
+        </header>
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                Civic Issue Reporting Platform
+            </div>
+
+            <h1>
+                Together, We Build a
+                <span>Better City.</span>
+            </h1>
+
+            <p>
+                Report civic problems, track their progress, and help make your city cleaner, safer, and better for everyone.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="report.html" class="hero-primary">
+                    Report an Issue
+                    <span>→</span>
+                </a>
+
+                <a href="track.html" class="hero-secondary">
+                    Track an Issue
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS SECTION -->
+<section class="how-it-works">
+    <div class="how-container">
+        <div class="section-heading">
+            <span class="section-label">HOW CITYCARE WORKS</span>
+            <h2>From Reporting to <span>Resolution.</span></h2>
+            <p>
+                CityCare makes it simple to report civic problems and stay informed until they are resolved.
+            </p>
+        </div>
+
+        <div class="steps-container">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+
+                <div class="step-icon">!</div>
+
+                <h3>Report an Issue</h3>
+
+                <p>
+                    Submit details about a civic problem and provide its location and supporting information.
+                </p>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+
+                <div class="step-icon">◉</div>
+
+                <h3>Track Progress</h3>
+
+                <p>
+                    Follow the status of your report and stay updated as it moves through the resolution process.
+                </p>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+
+                <div class="step-icon">✓</div>
+
+                <h3>See the Change</h3>
+
+                <p>
+                    Get notified when the issue is resolved and see the impact of citizen participation.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- LIVE CITY IMPACT -->
+<section class="city-impact">
+    <div class="impact-container">
+
+        <div class="impact-header">
+            <div>
+                <span class="section-label">CITY ACTIVITY</span>
+                <h2>Every Report Can Create <span>Real Change.</span></h2>
+            </div>
+
+            <p>
+                See how citizens and local authorities are working together to identify and resolve civic issues.
+            </p>
+        </div>
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <div class="impact-icon">▣</div>
+                <div class="impact-data">
+                    <span>Total Issues</span>
+                    <h3 id="totalIssues">0</h3>
+                </div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-icon">◷</div>
+                <div class="impact-data">
+                    <span>In Progress</span>
+                    <h3 id="inProgressIssues">0</h3>
+                </div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-icon">✓</div>
+                <div class="impact-data">
+                    <span>Issues Resolved</span>
+                    <h3 id="resolvedIssues">0</h3>
+                </div>
+            </div>
+
+            <div class="impact-card highlight-card">
+                <div class="impact-icon">↗</div>
+                <div class="impact-data">
+                    <span>Resolution Rate</span>
+                    <h3 id="resolutionRate">0%</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- ISSUE CATEGORIES -->
+<section class="issue-categories">
+    <div class="categories-container">
+
+        <div class="section-heading categories-heading">
+            <span class="section-label">WHAT CAN YOU REPORT?</span>
+            <h2>Every Problem <span>Deserves Attention.</span></h2>
+            <p>
+                From damaged roads to water problems, report the civic issues that affect your everyday life.
+            </p>
+        </div>
+
+        <div class="categories-grid">
+
+            <a href="report.html" class="category-card">
+                <div class="category-icon">▱</div>
+                <h3>Road Damage</h3>
+                <p>Potholes, damaged roads, broken footpaths, and unsafe streets.</p>
+                <span class="category-arrow">→</span>
+            </a>
+
+            <a href="report.html" class="category-card">
+                <div class="category-icon">♻</div>
+                <h3>Garbage & Waste</h3>
+                <p>Overflowing bins, illegal dumping, and uncollected waste.</p>
+                <span class="category-arrow">→</span>
+            </a>
+
+            <a href="report.html" class="category-card">
+                <div class="category-icon">≈</div>
+                <h3>Water Problems</h3>
+                <p>Water leakage, supply issues, drainage, and flooding.</p>
+                <span class="category-arrow">→</span>
+            </a>
+
+            <a href="report.html" class="category-card">
+                <div class="category-icon">✦</div>
+                <h3>Streetlights</h3>
+                <p>Broken, damaged, or non-functioning streetlights.</p>
+                <span class="category-arrow">→</span>
+            </a>
+
+            <a href="report.html" class="category-card">
+                <div class="category-icon">!</div>
+                <h3>Other Issues</h3>
+                <p>Report any other civic problem affecting your locality.</p>
+                <span class="category-arrow">→</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- CALL TO ACTION -->
+<section class="cta-section">
+    <div class="cta-container">
+        <div class="cta-content">
+            <span class="cta-label">MAKE A DIFFERENCE</span>
+            <h2>See a Problem? <span>Be Part of the Solution.</span></h2>
+            <p>
+                Your report can help bring attention to civic problems and contribute to a cleaner, safer, and better city.
+            </p>
+            <div class="cta-buttons">
+                <a href="report.html" class="cta-primary">
+                    Report an Issue
+                    <span>→</span>
+                </a>
+                <a href="track.html" class="cta-secondary">
+                    Track Your Issue
+                </a>
+            </div>
+        </div>
+        <div class="cta-visual">
+            <div class="cta-circle circle-one"></div>
+            <div class="cta-circle circle-two"></div>
+            <div class="cta-card">
+                <div class="cta-card-icon">✓</div>
+                <div>
+                    <span>CityCare</span>
+                    <strong>Every report matters.</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <img src="logo.png" alt="CityCare Logo">
+                <span>CityCare</span>
+            </div>
+            <p>
+                Helping citizens report civic problems and work towards cleaner, safer, and better cities.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Platform</h3>
+                <a href="index.html">Home</a>
+                <a href="report.html">Report Issue</a>
+                <a href="track.html">Track Issue</a>
+                <a href="login.html">Login</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Report Issues</h3>
+                <a href="report.html">Road Damage</a>
+                <a href="report.html">Garbage & Waste</a>
+                <a href="report.html">Water Problems</a>
+                <a href="report.html">Streetlights</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Get Started</h3>
+                <p class="footer-text">
+                    See a civic problem in your area? Report it and help bring attention to it.
+                </p>
+                <a href="report.html" class="footer-report-btn">
+                    Report an Issue <span>→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 CityCare. All rights reserved.</p>
+
+        <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

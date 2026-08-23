@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare | Track Issue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-orb orb-three"></div>
+
+    <header class="nav-wrapper">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="CityCare Logo">
+                <span class="logo-text">CityCare</span>
+            </a>
+
+            <div class="navlinks" id="navlinks">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="report.html" class="nav-link">Report Issue</a></li>
+                    <li><a href="track.html" class="nav-link active">Track Issue</a></li>
+                    <li><a href="login.html" class="login-btn">Login</a></li>
+                </ul>
+            </div>
+
+            <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="track-page">
+
+    <section class="track-hero">
+
+        <div class="track-heading">
+            <div class="section-tag">
+                <span class="tag-dot"></span>
+                Track Your Civic Report
+            </div>
+
+            <h1>
+                Stay Updated on<br>
+                Your <span>CityCare Report.</span>
+            </h1>
+
+            <p>
+                Enter your Tracking ID to check the current status and progress
+                of the issue you reported.
+            </p>
+        </div>
+
+
+        <!-- TRACKING SEARCH CARD -->
+        <div class="tracking-card">
+
+            <div class="tracking-icon">
+                🔎
+            </div>
+
+            <h2>Find Your Report</h2>
+
+            <p>
+                Enter the Tracking ID you received after submitting your report.
+            </p>
+
+            <div class="tracking-search">
+
+                <input
+                    type="text"
+                    id="trackingId"
+                    placeholder="Example: CC-123456789"
+                    autocomplete="off"
+                >
+
+                <button type="button" id="trackBtn">
+                    Track Issue
+                    <span>→</span>
+                </button>
+
+            </div>
+
+            <p class="tracking-help">
+                Your Tracking ID looks like:
+                <strong>CC-123456789</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT SECTION -->
+    <section class="tracking-result" id="trackingResult">
+
+        <!-- Empty State -->
+        <div class="track-empty show" id="trackEmpty">
+
+            <div class="empty-icon">📍</div>
+
+            <h2>Your Report Details Will Appear Here</h2>
+
+            <p>
+                Enter your Tracking ID above to view the latest status
+                of your civic issue.
+            </p>
+
+        </div>
+
+
+        <!-- Report Data -->
+        <div class="report-result-card" id="reportResultCard">
+
+            <div class="result-header">
+
+                <div>
+                    <span class="result-label">TRACKING ID</span>
+                    <h2 id="resultTrackingId">CC-XXXXXXXXX</h2>
+                </div>
+
+                <div class="status-badge" id="statusBadge">
+                    Submitted
+                </div>
+
+            </div>
+
+
+            <div class="report-info-grid">
+
+                <div class="report-details">
+
+                    <div class="detail-item">
+                        <span class="detail-label">Issue Category</span>
+                        <strong id="resultCategory">Garbage & Waste</strong>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-label">Description</span>
+                        <p id="resultDescription">
+                            Report description will appear here.
+                        </p>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-label">Location</span>
+                        <p id="resultLocation">
+                            Location information will appear here.
+                        </p>
+                    </div>
+
+                    <div class="detail-row">
+
+                        <div class="detail-item">
+                            <span class="detail-label">Submitted On</span>
+                            <strong id="resultDate">--</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="detail-label">Current Status</span>
+                            <strong id="resultStatus">Submitted</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EVIDENCE IMAGE -->
+                <div class="report-evidence">
+
+                    <span class="detail-label">Evidence</span>
+
+                    <div class="evidence-image-box">
+                        <img
+                            id="resultImage"
+                            src=""
+                            alt="Issue evidence"
+                        >
+
+                        <div class="no-image" id="noImage">
+                            No image available
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATUS TIMELINE -->
+            <div class="status-timeline-section">
+
+                <h3>Report Progress</h3>
+
+                <div class="status-timeline">
+
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-step active" data-status="Submitted">
+
+                        <div class="timeline-circle">
+                            ✓
+                        </div>
+
+                        <div class="timeline-content">
+                            <strong>Submitted</strong>
+                            <span>Report received</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-step" data-status="Under Review">
+
+                        <div class="timeline-circle">
+                            2
+                        </div>
+
+                        <div class="timeline-content">
+                            <strong>Under Review</strong>
+                            <span>Being reviewed</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-step" data-status="In Progress">
+
+                        <div class="timeline-circle">
+                            3
+                        </div>
+
+                        <div class="timeline-content">
+                            <strong>In Progress</strong>
+                            <span>Action is underway</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-step" data-status="Resolved">
+
+                        <div class="timeline-circle">
+                            4
+                        </div>
+
+                        <div class="timeline-content">
+                            <strong>Resolved</strong>
+                            <span>Issue completed</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOT FOUND -->
+        <div class="track-not-found" id="trackNotFound">
+
+            <div class="not-found-icon">
+                !
+            </div>
+
+            <h2>Report Not Found</h2>
+
+            <p>
+                We couldn't find a report with this Tracking ID.
+                Please check the ID and try again.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script type="module" src="track.js"></script>
+</body>
+</html>
